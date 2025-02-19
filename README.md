@@ -10,3 +10,5 @@ wget https://raw.githubusercontent.com/ugurcanETH/NexusTR/refs/heads/main/setup.
 chmod +x setup.sh
 ./setup.sh
 ```
+
+Do you agree to the Nexus Beta Terms of Use (https://nexus.xyz/terms-of-use)? (Y/n) sorusuna Y + ENTER ile devam ediyoruz.
