@@ -1,2 +1,13 @@
-# NexusTR
-Rehber kısa süre önce başlayan Nexus Testnet II için hazırlanmıştır. Tüm sorunları giderecek ve basit bir kurulum imkanı sağlamak adına elimden geleni yapmaya çalıştım.
+# NexusTR📌 Nexus Testnet Node Kurulumu (Tek Komut)
+Bu script, tüm bağımlılıkları yükleyip Nexus Testnet Node’unuzu tam otomatik kurar.
+
+🛠 Kurulum için tek yapmanız gereken:
+
+bash
+Kopyala
+Düzenle
+bash <(curl -s https://raw.githubusercontent.com/ugurcanETH/NexusTR/main/setup.sh)
+🚀 Kurulum tamamlandığında, sisteminiz Nexus ağına bağlanmış olacak ve NEX puan kazanmaya başlayacaksınız!
+
+Eğer bir sorun yaşarsanız, issue açabilir veya benimle iletişime geçebilirsiniz. ✅
+
