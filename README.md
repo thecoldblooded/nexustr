@@ -11,4 +11,3 @@ wget https://raw.githubusercontent.com/ugurcanETH/NexusTR/refs/heads/main/setup.
 chmod +x setup.sh
 
 ./setup.sh
-``
