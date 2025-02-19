@@ -15,12 +15,7 @@ source $HOME/.cargo/env
 rustup target add riscv32i-unknown-none-elf
 echo "✅ Rust sürümü: $(rustc --version)"
 
-# 3️⃣ Nexus CLI Kurulumu
-echo "🌐 Nexus CLI yükleniyor..."
-curl https://cli.nexus.xyz/ | sh
-echo "✅ Nexus CLI sürümü: $(nexus --version)"
-
-# 4️⃣ Güncel Protobuf (protoc) Yükleme
+# 3️⃣ Güncel Protobuf (protoc) Yükleme (Öne Alındı)
 echo "⬇️ Güncel protobuf indiriliyor..."
 mkdir -p /tmp/protoc_install && cd /tmp/protoc_install
 wget -q https://github.com/protocolbuffers/protobuf/releases/download/v21.12/protoc-21.12-linux-x86_64.zip
@@ -28,11 +23,12 @@ unzip -q protoc-21.12-linux-x86_64.zip -d /usr/local
 export PATH="/usr/local/bin:$PATH"
 echo "✅ Protobuf sürümü: $(protoc --version)"
 
-# 5️⃣ Nexus CLI Yeniden Kuruluyor
-echo "🔄 Nexus CLI tekrar yükleniyor..."
+# 4️⃣ Nexus CLI Kurulumu
+echo "🌐 Nexus CLI yükleniyor..."
 curl https://cli.nexus.xyz/ | sh
+echo "✅ Nexus CLI sürümü: $(nexus --version)"
 
-# 6️⃣ Node ID Bağlantısı
+# 5️⃣ Node ID Bağlantısı
 echo "🔗 Nexus Node ID Bağlantısı için aşağıdaki adımları takip edin:"
 echo "1. Tarayıcınızdan https://app.nexus.xyz/nodes adresine gidin."
 echo "2. Hesabınıza giriş yapın veya yeni bir hesap oluşturun."
