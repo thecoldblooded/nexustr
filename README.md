@@ -1,6 +1,7 @@
 # NexusTR 🔺 Nexus Testnet Node Kurulumu (Tek Komut)
 
 Bu script, tüm bağımlılıkları yükleyip **Nexus Testnet Node**’unuzu tam otomatik olarak kurar. 🚀  
+Sunucu olarak 2 CPU ve 4 RAM bir sunucu tercih edebilirsiniz. Ben Hetzner'den bu şekilde kiralayıp kurulum yaptım.
 
 ---
 
