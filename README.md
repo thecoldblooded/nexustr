@@ -7,8 +7,6 @@ Aşağıdaki komutu terminalde çalıştırarak **otomatik kurulumu başlatabili
 
 ```
 wget https://raw.githubusercontent.com/ugurcanETH/NexusTR/refs/heads/main/setup.sh
-
 chmod +x setup.sh
-
 ./setup.sh
 ```
