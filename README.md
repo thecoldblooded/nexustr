@@ -18,6 +18,7 @@ Bu script, Nexus Testnet Node'unuzu tek komut ile kurar ve sürekli çalışmas�
 ```bash
 apt update && apt upgrade -y
 apt install screen
+```
 
 📌 Tek Komutla Kurulum
 
