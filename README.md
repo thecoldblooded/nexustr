@@ -14,6 +14,11 @@ Bu rehber, 4 vCPU / 8GB RAM sunucular için tam optimize edilmiştir ve bellek s
 
 Bu script, Nexus Testnet Node'unuzu tek komut ile kurar ve sürekli çalışmasını sağlar.Kurulum tamamlandıktan sonra terminali kapatsanız bile screen sayesinde node arka planda çalışmaya devam eder.
 
+**Öncelikle Gerekli Bağımlılıkların Yüklenmesi**
+```bash
+apt update && apt upgrade -y
+apt install screen
+
 📌 Tek Komutla Kurulum
 
 Aşağıdaki komutu terminalde çalıştırarak otomatik kurulumu başlatabilirsiniz:
@@ -59,6 +64,8 @@ Kurulumdan sonra Nexus ağına bağlanarak NEX puan kazanmak için aşağıdaki 
 6️⃣ Terminale dönün ve şu işlemi yapın: [2] yazıp ENTER tuşuna basın. Panelden aldığınız Node ID’yi yapıştırıp ENTER’a basın.
 
 7️⃣ Tebrikler! 🎉 Nexus Node’unuz başarıyla çalışıyor. 🚀**
+
+Bu adımdan sonra kurulumu
 
 🔧 Script Ne Yapıyor?
 
