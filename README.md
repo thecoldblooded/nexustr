@@ -27,8 +27,7 @@ screen -S nexus
 
 📌 Tek Komutla Kurulum
 
-Aşağıdaki komutu terminalde çalıştırarak otomatik kurulumu başlatabilirsiniz:
-
+**Aşağıdaki komutu terminalde çalıştırarak otomatik kurulumu başlatabilirsiniz:**
 ```bash
 wget https://raw.githubusercontent.com/ugurcanETH/NexusTR/main/setup.sh
 chmod +x setup.sh
