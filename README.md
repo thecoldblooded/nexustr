@@ -4,8 +4,11 @@
 Bu rehber, 4 vCPU / 8GB RAM sunucular için tam optimize edilmiştir ve bellek sorunlarını önlemek için 4GB Swap ekler.
 
 ✔ Tüm bağımlılıkları otomatik yükler
+
 ✔ Nexus CLI’yi kurar ve çalıştırır
+
 ✔ Swap’i 4GB yaparak RAM kullanımını optimize eder
+
 ✔ screen ile node’u arka planda çalıştırır
 
 ---
