@@ -20,6 +20,11 @@ apt update && apt upgrade -y
 apt install screen
 ```
 
+**Sonra Tek Komut ile Kurulum Öncesi Screen Açalım**
+```bash
+screen -S nexus
+```
+
 📌 Tek Komutla Kurulum
 
 Aşağıdaki komutu terminalde çalıştırarak otomatik kurulumu başlatabilirsiniz:
