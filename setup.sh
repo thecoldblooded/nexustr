@@ -6,7 +6,7 @@ sleep 2
 # 1️⃣ Gerekli Bağımlılıkların Yüklenmesi
 echo "📦 Gerekli bağımlılıklar yükleniyor..."
 apt update && apt upgrade -y
-apt install -y curl wget git unzip build-essential pkg-config libssl-dev cmake gcc g++ make screen
+apt install -y curl wget git unzip build-essential pkg-config libssl-dev cmake gcc g++ make
 
 # 2️⃣ Rust Kurulumu
 echo "🦀 Rust yükleniyor..."
@@ -15,32 +15,36 @@ source $HOME/.cargo/env
 rustup target add riscv32i-unknown-none-elf
 echo "✅ Rust sürümü: $(rustc --version)"
 
-# 3️⃣ Güncel Protobuf (protoc) Yükleme
-echo "⬇️ Güncel protobuf indiriliyor..."
+# 3️⃣ Swap (Bellek) Optimizasyonu (4GB)
+echo "🛠 Swap alanı oluşturuluyor (4GB)..."
+swapoff -a
+rm -f /swapfile
+fallocate -l 4G /swapfile
+chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+echo '/swapfile swap swap defaults 0 0' | tee -a /etc/fstab
+echo "✅ Swap başarıyla oluşturuldu:"
+free -h
+
+# 4️⃣ Güncel Protobuf (protoc) Yükleme
+echo "⬇️ Güncel Protobuf (protoc) indiriliyor..."
 mkdir -p /tmp/protoc_install && cd /tmp/protoc_install
 wget -q https://github.com/protocolbuffers/protobuf/releases/download/v21.12/protoc-21.12-linux-x86_64.zip
 unzip -q protoc-21.12-linux-x86_64.zip -d /usr/local
 export PATH="/usr/local/bin:$PATH"
 echo "✅ Protobuf sürümü: $(protoc --version)"
 
-# 4️⃣ Swap (Bellek) Problemini Önleme (2GB Swap)
-echo "🔄 2GB Swap ekleniyor..."
-fallocate -l 2G /swapfile
-chmod 600 /swapfile
-mkswap /swapfile
-swapon /swapfile
-echo '/swapfile swap swap defaults 0 0' | tee -a /etc/fstab
-echo "✅ 2GB Swap eklendi!"
-
-# 5️⃣ Nexus CLI Kurulumu (En Sona Alındı)
+# 5️⃣ Nexus CLI Kurulumu
 echo "🌐 Nexus CLI yükleniyor..."
 curl https://cli.nexus.xyz/ | sh
-echo "✅ Nexus CLI kuruldu!"
+echo "✅ Nexus CLI başarıyla kuruldu!"
 
-# 6️⃣ Nexus Node’u `screen` İçinde Başlatma
-echo "🎯 Nexus Node'u başlatılıyor (screen ile arka planda çalışacak)..."
+# 6️⃣ Nexus Node’u Screen ile Başlatma
+echo "🖥️ Nexus Node screen içinde başlatılıyor..."
 screen -dmS nexus /root/.nexus/network-api/clients/cli/target/release/nexus-network start
+echo "✅ Nexus Node çalışıyor! Screen oturumunu görmek için: screen -r nexus"
 
-echo "✅ Kurulum Tamamlandı! 🚀"
-echo "💡 Nexus Node'un çalıştığını kontrol etmek için: screen -r nexus"
-echo "🔗 Bağlantıyı kapatsan bile süreç devam eder!"
+echo "🚀 Kurulum tamamlandı! Nexus Node'unuzu yönetmek için aşağıdaki komutları kullanabilirsiniz:"
+echo "📌 Nexus loglarını görmek için: screen -r nexus"
+echo "📌 Nexus Node'u durdurmak için: screen -X -S nexus quit"
