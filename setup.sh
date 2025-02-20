@@ -40,11 +40,3 @@ echo "🌐 Nexus CLI yükleniyor..."
 curl https://cli.nexus.xyz/ | sh
 echo "✅ Nexus CLI başarıyla kuruldu!"
 
-# 6️⃣ Nexus Node’u Screen ile Başlatma
-echo "🖥️ Nexus Node screen içinde başlatılıyor..."
-screen -dmS nexus /root/.nexus/network-api/clients/cli/target/release/nexus-network start
-echo "✅ Nexus Node çalışıyor! Screen oturumunu görmek için: screen -r nexus"
-
-echo "🚀 Kurulum tamamlandı! Nexus Node'unuzu yönetmek için aşağıdaki komutları kullanabilirsiniz:"
-echo "📌 Nexus loglarını görmek için: screen -r nexus"
-echo "📌 Nexus Node'u durdurmak için: screen -X -S nexus quit"
