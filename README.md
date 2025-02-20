@@ -1,6 +1,6 @@
 # NexusTR 🔺 Nexus Testnet Node Kurulumu (Tek Komut)
 
-✅ Güncellenmiş Nexus Node Kurulum Rehberi (4 vCPU / 8GB RAM Sunucu için Optimize Edildi)
+✅ Güncellenmiş Nexus Node Kurulum Rehberi (4 vCPU / 8GB RAM Sunucu için Optimize Edildi- 2 vCPU / 4GB AM Sunucularda Sorun Yaşanıyor Güncelleme Sonrası. O yüzden 4/8 Sunucu ile İlerlemek En Mantıklısı.)
 Bu rehber, 4 vCPU / 8GB RAM sunucular için tam optimize edilmiştir ve bellek sorunlarını önlemek için 4GB Swap ekler.
 
 ✔ Tüm bağımlılıkları otomatik yükler
@@ -61,9 +61,15 @@ Kurulumdan sonra Nexus ağına bağlanarak NEX puan kazanmak için aşağıdaki 
 7️⃣ Tebrikler! 🎉 Nexus Node’unuz başarıyla çalışıyor. 🚀**
 
 🔧 Script Ne Yapıyor?
+
 ✅ Gerekli tüm bağımlılıkları yükler (Rust, Protobuf, Nexus CLI vb.)
+
 ✅ 2GB Swap ekler (2 vCPU / 4GB RAM sunucular için optimize edildi)
+
 ✅ Nexus CLI'yi yükler
+
 ✅ Nexus Node'u screen içinde başlatır, böylece terminal kapansa bile çalışmaya devam eder
+
 ✅ Otomatik çalıştırmak için tam konfigüre edilmiştir
+
 
