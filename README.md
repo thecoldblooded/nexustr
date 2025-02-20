@@ -73,9 +73,8 @@ Kurulumdan sonra Nexus ağına bağlanarak NEX puan kazanmak için aşağıdaki 
 
 7️⃣ Tebrikler! 🎉 Nexus Node’unuz başarıyla çalışıyor. 🚀**
 
-Bu adımdan sonra kurulumu
-
-🔧 Script Ne Yapıyor?
+---------------------------------------------
+**🔧 Script Ne Yapıyor?**
 
 ✅ Gerekli tüm bağımlılıkları yükler (Rust, Protobuf, Nexus CLI vb.)
 
@@ -87,4 +86,32 @@ Bu adımdan sonra kurulumu
 
 ✅ Otomatik çalıştırmak için tam konfigüre edilmiştir
 
+-----------------------------------
+📌 Kurulum Sonrası Kullanım Talimatları
 
+**1️⃣ Nexus Node’un çalıştığını kontrol etmek için: Bu komut ile Nexus Node’unuzu izleyebilirsiniz.**
+
+```bash
+screen -r nexus
+```
+
+
+**2️⃣ Terminali Ark Plana Almak İçin CTRL + A + D kullanacaksınız.**
+
+
+**3️⃣ Eğer screen -r nexus hata verirse, çalışan screen oturumlarını görmek için:**
+
+```bash
+screen -ls
+```
+
+```bash
+screen -r [ID]
+```
+
+**4️⃣ Nexus Node’u durdurmak isterseniz:**
+```bash
+screen -X -S nexus quit
+```
+
+**Bu komut, Nexus Node’unuzu durdurur ve screen oturumunu kapatır.**
