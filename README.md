@@ -1,12 +1,22 @@
 # NexusTR 🔺 Nexus Testnet Node Kurulumu (Tek Komut)
 
-Bu script, tüm bağımlılıkları yükleyip **Nexus Testnet Node**’unuzu tam otomatik olarak kurar. 🚀  
-Sunucu olarak 2 CPU ve 4 RAM bir sunucu tercih edebilirsiniz. Ben Hetzner'den bu şekilde kiralayıp kurulum yaptım.
+✅ Güncellenmiş Nexus Node Kurulum Rehberi (4 vCPU / 8GB RAM Sunucu için Optimize Edildi)
+Bu rehber, 4 vCPU / 8GB RAM sunucular için tam optimize edilmiştir ve bellek sorunlarını önlemek için 4GB Swap ekler.
+
+✔ Tüm bağımlılıkları otomatik yükler
+✔ Nexus CLI’yi kurar ve çalıştırır
+✔ Swap’i 4GB yaparak RAM kullanımını optimize eder
+✔ screen ile node’u arka planda çalıştırır
 
 ---
 
-## 📌 **Kurulum İçin Tek Komut**  
-Terminalde aşağıdaki komutları sırayla çalıştırarak **otomatik kurulumu başlatabilirsiniz**:  
+🚀 Nexus Testnet Node Kurulumu
+
+Bu script, Nexus Testnet Node'unuzu tek komut ile kurar ve sürekli çalışmasını sağlar.Kurulum tamamlandıktan sonra terminali kapatsanız bile screen sayesinde node arka planda çalışmaya devam eder.
+
+📌 Tek Komutla Kurulum
+
+Aşağıdaki komutu terminalde çalıştırarak otomatik kurulumu başlatabilirsiniz:
 
 ```bash
 wget https://raw.githubusercontent.com/ugurcanETH/NexusTR/main/setup.sh
@@ -19,7 +29,7 @@ chmod +x setup.sh
 Do you agree to the Nexus Beta Terms of Use (https://nexus.xyz/terms-of-use)? (Y/n)
 ```
 
-**Kurulum tamamen otomatik olarak tamamlanacaktır ve aşağıdaki ekranı göreceksiniz:**
+**Kurulum tamamen otomatik olarak tamamlanacaktır ve aşağıdaki ekranı göreceksiniz: 2'ye basıp devam ediyoruz.**
 ```bash
 
 The Nexus network is a massively-parallelized proof network for executing and proving the Nexus zkVM.
@@ -49,3 +59,11 @@ Kurulumdan sonra Nexus ağına bağlanarak NEX puan kazanmak için aşağıdaki 
 6️⃣ Terminale dönün ve şu işlemi yapın: [2] yazıp ENTER tuşuna basın. Panelden aldığınız Node ID’yi yapıştırıp ENTER’a basın.
 
 7️⃣ Tebrikler! 🎉 Nexus Node’unuz başarıyla çalışıyor. 🚀**
+
+🔧 Script Ne Yapıyor?
+✅ Gerekli tüm bağımlılıkları yükler (Rust, Protobuf, Nexus CLI vb.)
+✅ 2GB Swap ekler (2 vCPU / 4GB RAM sunucular için optimize edildi)
+✅ Nexus CLI'yi yükler
+✅ Nexus Node'u screen içinde başlatır, böylece terminal kapansa bile çalışmaya devam eder
+✅ Otomatik çalıştırmak için tam konfigüre edilmiştir
+
